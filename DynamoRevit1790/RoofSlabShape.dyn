@@ -1,0 +1,439 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "RoofSlabShape",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "878917e20d9e44b5a01bb17ae88f1069",
+      "Name": "Integer Slider",
+      "Type": "number",
+      "Value": "11",
+      "MaximumValue": 20.0,
+      "MinimumValue": 0.0,
+      "StepValue": 1.0,
+      "NumberType": "Integer",
+      "Description": "A slider that produces integer values."
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Nodes.DSFaceSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "117a8c2e-5b37-4807-95cb-9628e44bc05e-0002c834:2:SURFACE"
+      ],
+      "Id": "f384fde46bf448848b86251ecd1ab7fc",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "951546bc311341578cf1291e956d989e",
+          "Name": "Surface",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FirstItem@var[]..[]",
+      "Id": "16429698b4c248c0b9e33f4e32e25f6a",
+      "Inputs": [
+        {
+          "Id": "889a3bd3c63f49a6af7074d7c4d6eebf",
+          "Name": "list",
+          "Description": "List to get the first item from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "043ed2fb864749d9a90dcfb61287ca0b",
+          "Name": "item",
+          "Description": "First item in the list.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the first item in a list.\n\nList.FirstItem (list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Integer",
+      "InputValue": 11,
+      "MaximumValue": 20,
+      "MinimumValue": 0,
+      "StepValue": 1,
+      "Id": "878917e20d9e44b5a01bb17ae88f1069",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6d228631b20f4e79b10508178ccc40f5",
+          "Name": "",
+          "Description": "Int32",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces integer values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "a276df2e-b669-4145-b656-cf75679a16a0",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "84dda9c4187e45e692aeff632155d37c",
+      "Inputs": [
+        {
+          "Id": "b9c91925e7be4a6d952048d879aca4f8",
+          "Name": "surface",
+          "Description": "Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "858cf2e141f64f77aa00382a6fc224fe",
+          "Name": "U",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "57b5ceb839a6459ea9876ab1858c5d6f",
+          "Name": "V",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a2efc134950c4af98bba5c30f5ccb85f",
+          "Name": "Points",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "85fd927dfcc34654ae81f86ac010fcea",
+          "Name": "Normals",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "01b273319af9405d98d04300e737fab9",
+          "Name": "UVs",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Returns UV coordinates, XYZ coordinates and normals for a face with UV subdivision"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "4d07bfa5c4b64e089ee8cdd282cfe5e1",
+      "Inputs": [
+        {
+          "Id": "9e05690cbb634db6a753a31a8f6a81a7",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a32754b5ebb84c6793c21923da7aa769",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "5ffde122dd9e44eb8ba3ee6d5b943f7c",
+      "Inputs": [
+        {
+          "Id": "9b6d4e0e9c5a4d5eac5cc826f73e477b",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "62bbc563071f4a2aa7325e3a4a19511c",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "fbea1636-9c45-4593-8ff6-4d726617d16b-0002e17e"
+      ],
+      "Id": "df973931cd60452ebae65d5e95515479",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a85185a60c6441039488c09a52f9a6c4",
+          "Name": "Element",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Roof.AddPoint@Autodesk.DesignScript.Geometry.Point",
+      "Id": "1fc330b2dcf34cb9ae1b6254f617d2f7",
+      "Inputs": [
+        {
+          "Id": "ee850fd510934fd5acaee1297566f762",
+          "Name": "roof",
+          "Description": "Revit.Elements.Roof",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "09dc8e23f86d403a93dfbd51f4a94994",
+          "Name": "point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "83ce3596bfd843ab8eed3687ab84dfb2",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Add Point to Slab Shape\n\nRoof.AddPoint (point: Point): void"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "951546bc311341578cf1291e956d989e",
+      "End": "889a3bd3c63f49a6af7074d7c4d6eebf",
+      "Id": "3f5f78ef04064de49fa11ea033f41ea4"
+    },
+    {
+      "Start": "043ed2fb864749d9a90dcfb61287ca0b",
+      "End": "b9c91925e7be4a6d952048d879aca4f8",
+      "Id": "3851fab40aa3457fa0498090991ac59c"
+    },
+    {
+      "Start": "6d228631b20f4e79b10508178ccc40f5",
+      "End": "858cf2e141f64f77aa00382a6fc224fe",
+      "Id": "df45773abe0f48d99262b8882fd70407"
+    },
+    {
+      "Start": "6d228631b20f4e79b10508178ccc40f5",
+      "End": "57b5ceb839a6459ea9876ab1858c5d6f",
+      "Id": "7e8e8c6ebe8d476a9d6a8847d4ed3755"
+    },
+    {
+      "Start": "a2efc134950c4af98bba5c30f5ccb85f",
+      "End": "9e05690cbb634db6a753a31a8f6a81a7",
+      "Id": "76d0df7d70c84e2dba346a5fa0455df5"
+    },
+    {
+      "Start": "a32754b5ebb84c6793c21923da7aa769",
+      "End": "09dc8e23f86d403a93dfbd51f4a94994",
+      "Id": "ba762b01cad64ec8a213a0f68a0f5065"
+    },
+    {
+      "Start": "a85185a60c6441039488c09a52f9a6c4",
+      "End": "ee850fd510934fd5acaee1297566f762",
+      "Id": "8b16a869cd194c8c973a068aff29acf8"
+    },
+    {
+      "Start": "83ce3596bfd843ab8eed3687ab84dfb2",
+      "End": "9b6d4e0e9c5a4d5eac5cc826f73e477b",
+      "Id": "9bc3e1fc0de149779609dc42ac2b1190"
+    }
+  ],
+  "Dependencies": [
+    "a276df2e-b669-4145-b656-cf75679a16a0"
+  ],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.0.4385",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Select Face",
+        "Id": "f384fde46bf448848b86251ecd1ab7fc",
+        "IsInput": true,
+        "IsOutput": false,
+        "Excluded": false,
+        "X": -97.5,
+        "Y": 3.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.FirstItem",
+        "Id": "16429698b4c248c0b9e33f4e32e25f6a",
+        "IsInput": false,
+        "IsOutput": false,
+        "Excluded": false,
+        "X": 232.5,
+        "Y": 3.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Integer Slider",
+        "Id": "878917e20d9e44b5a01bb17ae88f1069",
+        "IsInput": true,
+        "IsOutput": false,
+        "Excluded": false,
+        "X": 232.5,
+        "Y": 112.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Paneling.GridFromFace",
+        "Id": "84dda9c4187e45e692aeff632155d37c",
+        "IsInput": false,
+        "IsOutput": false,
+        "Excluded": false,
+        "X": 638.5,
+        "Y": 38.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "4d07bfa5c4b64e089ee8cdd282cfe5e1",
+        "IsInput": false,
+        "IsOutput": false,
+        "Excluded": false,
+        "X": 853.588483146067,
+        "Y": 36.6502808988764
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "5ffde122dd9e44eb8ba3ee6d5b943f7c",
+        "IsInput": false,
+        "IsOutput": false,
+        "Excluded": false,
+        "X": 1479.0764363993371,
+        "Y": -44.53525822389463
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Model Element",
+        "Id": "df973931cd60452ebae65d5e95515479",
+        "IsInput": true,
+        "IsOutput": false,
+        "Excluded": false,
+        "X": 974.176966292134,
+        "Y": -97.3307584269664
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Roof.AddPoint",
+        "Id": "1fc330b2dcf34cb9ae1b6254f617d2f7",
+        "IsInput": false,
+        "IsOutput": false,
+        "Excluded": false,
+        "X": 1231.4592120987509,
+        "Y": -44.069536132356291
+      }
+    ],
+    "Annotations": [],
+    "X": -1310.8359251768247,
+    "Y": 472.67686944158407,
+    "Zoom": 1.699027078519729
+  }
+}

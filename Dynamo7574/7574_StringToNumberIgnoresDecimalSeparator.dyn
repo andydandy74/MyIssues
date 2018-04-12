@@ -1,0 +1,164 @@
+{
+  "Uuid": "142a1779-6d87-41c9-a18c-1b0168e3fe05",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "7574_StringToNumberIgnoresDecimalSeparator",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0.2584;",
+      "Id": "f04495dddf884de99ea0957a8e0e0d3f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "18fcd08d82d14e96867bad5402d10390",
+          "Name": "",
+          "Description": "Wert des Ausdrucks in Zeile 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Ermöglicht die direkte Erstellung von DesignScript-Code."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.FromObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "79e71446200d4f17a1236742e393b466",
+      "Inputs": [
+        {
+          "Id": "2115f56990aa4f649cf36e04f96b4c1a",
+          "Name": "obj",
+          "Description": "Zu serialisierendes Objekt",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2ac831046def49a29294d6725e2cd49e",
+          "Name": "str",
+          "Description": "Ergebnis der mathematischen Berechnung",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Konvertiert ein Objekt in eine Zeichenfolge."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.String.ToNumber@string",
+      "Id": "fe171091fba04e64ace2173c4420f490",
+      "Inputs": [
+        {
+          "Id": "76f622bbdc884491ab67baaa6bdd5d3b",
+          "Name": "str",
+          "Description": "Zeichenfolge, die konvertiert werden soll\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "39e4f1640a774e34be8c7054fa799a74",
+          "Name": "number",
+          "Description": "Ganzzahl oder Gleitkommazahl",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Konvertiert eine Zeichenfolge in einen integer- oder double-Wert.\n\nString.ToNumber (str: string): var[]..[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "18fcd08d82d14e96867bad5402d10390",
+      "End": "2115f56990aa4f649cf36e04f96b4c1a",
+      "Id": "71f5f7110f544c9ba9ede3ee5accd790"
+    },
+    {
+      "Start": "2ac831046def49a29294d6725e2cd49e",
+      "End": "76f622bbdc884491ab67baaa6bdd5d3b",
+      "Id": "77f50ec88a2d4220998204209e248934"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.0.4467",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Hintergrundvorschau",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "f04495dddf884de99ea0957a8e0e0d3f",
+        "IsInput": false,
+        "IsOutput": false,
+        "Excluded": false,
+        "X": 285.0,
+        "Y": 244.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String from Object",
+        "Id": "79e71446200d4f17a1236742e393b466",
+        "IsInput": false,
+        "IsOutput": false,
+        "Excluded": false,
+        "X": 418.0,
+        "Y": 242.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String.ToNumber",
+        "Id": "fe171091fba04e64ace2173c4420f490",
+        "IsInput": false,
+        "IsOutput": false,
+        "Excluded": false,
+        "X": 600.0,
+        "Y": 243.0
+      }
+    ],
+    "Annotations": [],
+    "X": 0.0,
+    "Y": 0.0,
+    "Zoom": 1.0
+  }
+}
