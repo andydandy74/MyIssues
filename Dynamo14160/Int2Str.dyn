@@ -1,0 +1,243 @@
+{
+  "Uuid": "5212055c-f8e5-4146-bc4b-6bc38d612237",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Int2Str",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "4f7040fcac6346058bdf2f5d461bb977",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b23fbdb85a034683984e4073874a2753",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "2;"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.FromObject, CoreNodeModels",
+      "Id": "4828150642c94236a352b393a9f84a09",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "c9dae49786a240f59ce2fbbb2e88a38d",
+          "Name": "object",
+          "Description": "Object to be serialized",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "af02a2d1e72340adb15f3b33c2e235e2",
+          "Name": "string",
+          "Description": "String representation of the object",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Converts an object to a string representation"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Code": "OUT = str(IN[0])",
+      "Engine": "CPython3",
+      "EngineName": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "0e8cee87fa044b51bb5d2145784e8bdd",
+      "NodeType": "PythonScriptNode",
+      "Inputs": [
+        {
+          "Id": "31595fa4d48e47e4a481e3f68d0b702a",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c96543f9ff4143aa93d71b3a23e45263",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Code": "OUT = str(IN[0])",
+      "Engine": "IronPython2",
+      "EngineName": "IronPython2",
+      "VariableInputPorts": true,
+      "Id": "c7ce71ea6c924a39b3cc8a063ecb9f2d",
+      "NodeType": "PythonScriptNode",
+      "Inputs": [
+        {
+          "Id": "3c4c144bb5f7428191693c9b13cc7c35",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3ad8ff38efe744d7b5e462fcb5cff346",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "b23fbdb85a034683984e4073874a2753",
+      "End": "c9dae49786a240f59ce2fbbb2e88a38d",
+      "Id": "8878a2703ca9404b9d01bb6684ba8d9c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b23fbdb85a034683984e4073874a2753",
+      "End": "31595fa4d48e47e4a481e3f68d0b702a",
+      "Id": "1d85743b289843609c6076e2e296e58a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b23fbdb85a034683984e4073874a2753",
+      "End": "3c4c144bb5f7428191693c9b13cc7c35",
+      "Id": "93ed732739f040a9aa4b6c4f4035a7e1",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.18",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "6.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.18.1.5096",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "4f7040fcac6346058bdf2f5d461bb977",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 85.875298873271959,
+        "Y": 437.855439777676
+      },
+      {
+        "Id": "4828150642c94236a352b393a9f84a09",
+        "Name": "String from Object",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 329.58867124783018,
+        "Y": 231.53246608514388
+      },
+      {
+        "Id": "0e8cee87fa044b51bb5d2145784e8bdd",
+        "Name": "Python Script",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 345.11641701956989,
+        "Y": 429.77002043768772
+      },
+      {
+        "Id": "c7ce71ea6c924a39b3cc8a063ecb9f2d",
+        "Name": "Python Script",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 343.78110375765408,
+        "Y": 621.609205886361
+      }
+    ],
+    "Annotations": [],
+    "X": 38.617266946160839,
+    "Y": -170.71925444813212,
+    "Zoom": 0.98264231136796509
+  }
+}
